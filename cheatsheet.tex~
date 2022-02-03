@@ -1,9 +1,9 @@
-\documentclass[14pt,english]{scrbook}
+\documentclass[14pt,english,oneside]{scrbook}
 \usepackage{ae,aecompl}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage{geometry}
-\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+%\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
 \setlength{\parskip}{\smallskipamount}
 \setlength{\parindent}{0pt}
 \usepackage{amsmath}
@@ -13,7 +13,7 @@
 \setstretch{1.1}
 
 \makeatletter
-\numberwithin{equation}{section}
+\numberwithin{equation}{chapter}
 \theoremstyle{definition}
 \newtheorem*{example*}{\protect\examplename}
 \theoremstyle{plain}
@@ -38,18 +38,26 @@
 \providecommand{\theoremname}{Theorem}
 
 \begin{document}
+
+
 \title{Combinatorics: Cheatsheet}
 \author{Ronald Mangang}
-\thispagestyle{empty}
+
 \maketitle
-
+\tableofcontents
+\vfill
+These notes closely follow the book of \textit{Principles and Techniques of Combinatorics}.
+\thispagestyle{empty}
 \newpage
-
+\pagenumbering{arabic}
 
 
 \chapter{Inclusion-Exclusion}
 
-\section{Inclusion-exclusion principle}
+\paragraph{Inclusion-exclusion principle.}
+
+
+
 
 Suppose $A_1, A_2, \ldots, A_n$ are finite sets then
 \begin{align*}
@@ -59,7 +67,7 @@ Suppose $A_1, A_2, \ldots, A_n$ are finite sets then
 \end{align*}
 
 \paragraph*{Generalized inclusion-exclusion principle.}
-Let $|S|=n$ and $\{P_1,P_2,\ldots,P_q\}$ be a set of $q$ properties which may be satisfied by elements of $S$. We define
+Let $S$ is an $n$-element set and $\{P_1,P_2, \ldots,P_q\}$ be a set of $q$ properties which may be satisfied by elements of $S$. We define
 \[
   \omega(P_{i1}P_{i2}\cdots P_{im}) = |\cap_{j=1}^m A_{ij} |
 \]
@@ -79,6 +87,11 @@ Then
         & \cdots + (-1)^{q-m}\binom{q}{m}\omega(q) \\
   =& \sum_{k=m}^q (-1)^{k-m}\binom{k}{m}\omega (k).
 \end{align*}
+
+\begin{proof}
+  Will be updated.
+\end{proof}
+
 We define $\omega(0) = |S|$. \\
 
 As a special case, we have
@@ -102,13 +115,42 @@ The number of onto functions from $A$ to $B$ where $|A|=n$ and $|B|=m$ is
   F(n,m) = \sum_{k=0}^m (-1)^k \binom{m}{k} (m-k)^n.
 \end{equation}
 
-This is the number of ways of distributing $n$ distinct objects into $m$ distinct boxes so that no box is empty. Then it follows that
+\begin{proof}
+  Will be updated.
+\end{proof}
+
+$F(n,m)$ is the number of ways of distributing $n$ distinct objects into $m$ distinct boxes so that no box is empty. Then it follows that
 \begin{equation}
   F(n,m) = m! S(n,m)
 \end{equation}
 which gives a formula to compute $S(n,m)$.
 
-\paragraph{Permutations with fixed points.}
+\paragraph{Permutations with fixed positions.}
+
+Let $0\leq k \leq r \leq n$. We define $D(n,r,k)$ to be number of $r$-permutations of $\{1,2,\ldots,n\}$ that have exactly $k$ fixed positions. From the generalized inclusion-exclusion principle, we can obtain
+\begin{equation}
+  D(n,r,k) = \frac{\binom{r}{k}}{(n-r)!} \sum_{i=0}^{r-k} (-1)^i \binom{r-k}{i}(n-k-i)!.
+\end{equation}
+
+\begin{proof}
+  Will be updated.
+\end{proof}
+
+\paragraph{Euler $\varphi$-function.}
+
+We define $\varphi (n)$ to be the number of integers between $1$ and $n$ which are co-prime to $n$. Let $n\in \mathbb{N}$ and let
+\[
+  n = p_1^{m_1}\cdot p_2^{m_2}\cdots p_k^{m_k}
+\]
+be its prime factorization. Using the generalized inclusion-exclusion principle, we can obtain
+\begin{equation}
+  \varphi(n) = n\left(1-\frac{1}{p_1}\right)\left(1-\frac{1}{p_2}\right)\cdots \left(1-\frac{1}{p_k}\right) = n\prod _{i=1}^k \left(1-\frac{1}{p_i}\right).
+\end{equation}
+
+\begin{proof}
+  Will be updated.
+\end{proof}
+
 
 
 
