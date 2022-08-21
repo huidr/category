@@ -1,7 +1,0 @@
-\babel@toc {english}{}
-\contentsline {chapter}{\numberline {1}Inclusion-Exclusion}{1}{}%
-\contentsline {paragraph}{\nonumberline Inclusion-exclusion principle.}{1}{}%
-\contentsline {paragraph}{\nonumberline Stirling numbers of the second kind.}{2}{}%
-\contentsline {paragraph}{\nonumberline Permutations with fixed positions.}{2}{}%
-\contentsline {paragraph}{\nonumberline Euler $\varphi $-function.}{3}{}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
