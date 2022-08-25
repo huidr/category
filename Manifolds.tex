@@ -1,0 +1,50 @@
+\documentclass{amsart}
+\input{macros}
+\input{preamble}
+
+\begin{document}
+\includepdf{cover}
+
+These are lecture notes for the course MTH403: Manifolds taught by Alok Maharana during the monsoon session of 2022. I live-\TeX{}-ed them on Emacs. Please report bugs/errors, if any.
+
+\hfill Ronald Huidrom
+
+\tableofcontents
+
+\section{The Course Awakens, 22/07/2022} 
+
+\section{Manifolds Make Way, 23/07/2022}
+
+\section{25/07/2022}
+
+
+\dfn{$C^{\infty}$-compatible charts}{Two charts $(U, \phi : U \to \bbR^n)$, $(V, \psi: V \to \bbR^n)$ of a topological manifold are $C^{\infty}$-compatible if the two maps 
+\begin{displaymath}
+\phi \circ \psi^{-1} : \psi(U \cap V) \to \phi(U \cap V), \hspace*{1cm} \psi \circ \phi^{-1} : \phi(U \cap V) \to \psi(U \cap V)
+\end{displaymath}
+are $C-\infty$. These two are called transition functions. If $U\cap V$ is empty, then they are automatically compatible.
+[insert diagram here]}
+
+\nt{Differentiability upto $k$ times gives rise to the idea of $C^k$-compatible charts and ultimately $C^k$-manifolds.}
+
+\dfn{Atlas}{An atlas of a manifold $M$ is a collection $\{(U_{\alpha}, \phi_{\alpha})\}$ of pairwise $C^{\infty}$-compatible charts such that $\displaystyle M= \bigcup_{\alpha}U_{\alpha}$.}
+
+\ex{A circle}{[check notebook for diagram] A circle $S^1$ in complex plane is given by
+\begin{displaymath}
+S^1 = \{ e^{it} \in \C | 0 \leq t \leq 2\pi \}.
+\end{displaymath}
+Consider the open sets $U_1, U_2$ of the circle $S^1$ defined by 
+\begin{displaymath}
+U_1 = \{ e^{it} \in \bbC | -\pi < t < \pi \}, \hspace*{1cm} U_2 = \{ e^{it} \in \bbC | 0 < t < 2\pi\}.
+\end{displaymath}
+Consider the maps 
+\begin{displaymath}
+\phi_1(e^{it}) = t \hspace*{1cm} \text{for } -\pi < t < \pi
+\end{displaymath}
+and 
+\begin{displaymath}
+\phi_2(e^{it}) = t \hspace*{1cm} \text{for } 0 < t < 2\pi
+\end{displaymath}
+}
+
+\end{document}
