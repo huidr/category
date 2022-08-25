@@ -1,1 +1,1 @@
-# Differential Geometry and Topology of Manifolds
+# Differential Geometry of Manifolds
