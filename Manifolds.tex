@@ -15,7 +15,7 @@ These are lecture notes for the course MTH403: Manifolds taught by Alok Maharana
 
 \section{Manifolds Make Way, 23/07/2022}
 
-\section{25/07/2022}
+\section{Compatible Charts, 25/07/2022}
 
 
 \dfn{$C^{\infty}$-compatible charts}{Two charts $(U, \phi : U \to \bbR^n)$, $(V, \psi: V \to \bbR^n)$ of a topological manifold are $C^{\infty}$-compatible if the two maps 
@@ -31,7 +31,7 @@ are $C-\infty$. These two are called transition functions. If $U\cap V$ is empty
 
 \ex{A circle}{[check notebook for diagram] A circle $S^1$ in complex plane is given by
 \begin{displaymath}
-S^1 = \{ e^{it} \in \C | 0 \leq t \leq 2\pi \}.
+S^1 = \{ e^{it} \in \bbC \mid 0 \leq t \leq 2\pi \}.
 \end{displaymath}
 Consider the open sets $U_1, U_2$ of the circle $S^1$ defined by 
 \begin{displaymath}
@@ -46,5 +46,41 @@ and
 \phi_2(e^{it}) = t \hspace*{1cm} \text{for } 0 < t < 2\pi
 \end{displaymath}
 }
+
+\section{29/08/2022}
+
+Compatibility of charts is not a transitive relation.
+
+\lem{}{Let $(U_{\alpha}, \phi_{\alpha})$ be an atlas. If two charts $(V, \psi)$ and $(W, \sigma)$ are both compatible with the atlas $(U_{\alpha}, \phi_{\alpha})$ then they are compatible with each other.}
+
+
+See that $\psi \circ \phi^{-1}_{\alpha}$ and $\phi_{\alpha} \circ \psi^{-1}$ are $C^{\infty}$. Also, $\sigma \circ \phi^{-1}_{\alpha}$ and $\phi_{\alpha} \circ \sigma^{-1}$ are $C^{\infty}$. Thus, $(\psi\circ \phi^{-1}_{\alpha})\circ  (\phi_{\alpha}\circ \sigma^{-1}) = \psi \circ \sigma^{-1}$ is $C^{\infty}$.
+
+\dfn{Maximal atlas}{An atlas is maximal if it is not contained in a larger atlas.}
+
+\dfn{Smooth manifold or $C^{\infty}-$manifold}{A smooth manifold or $C^{\infty}-$manifold is a topological manifold $M$ together with a maximal atlas. Such an atlas is called a differentiable structure on $M$. Also, $M$ has dimension $n$ if all its components have dimension $n$.}
+
+\thm{}{Any atlas is contained in a maximal atlas.}
+
+\rem{To show that a topological space $M$ is a smooth manifold, we only need to verify 
+\begin{enumerate}
+\item\label{item:1} $M$ is Hausdorff and second-countable, 
+\item\label{item:2} $M$ has a $C^{\infty}-$atlas (not necessarily maximal).
+\end{enumerate}}
+
+The following are some examples of smooth manifolds.
+
+\begin{enumerate}
+\item\label{item:3} Open subsets of a smooth manifold. Suppose $V\subset M$ is open. Suppose $\{(U_{\alpha},\phi_{\alpha})\}$ is an atlas on manifold $M$. Then $\{ (V\cap U_{\alpha}, \phi_{\alpha}|_{V\cap U_{\alpha}}) \}$ is an atlas on $V$. 
+\item\label{item:4} Counter-example. $xy = 0$. 
+\item\label{item:5} A discrete topological space is a dim $0$ manifold? 
+\item\label{item:6} Graph of a smooth function on an open set is a smooth manifold. Take a subset $A \subset \bbR^n$ and $f: A \to \bbR^m$. The graph 
+\begin{displaymath}
+T(f) = \{ (x, f(x)) \in A \times \bbR^m\}.
+\end{displaymath}
+Use projection map.
+\end{enumerate}
+
+\nt{How to prove that the cross is not a manifold? Consider the polynomial $xy$ which is a smooth manifold. Look at $xy=0$ which is a cross. So, a cross is the pre-image of the closed subset $\{0\}$. So, the cross is closed (using idea of continuity).}
 
 \end{document}
